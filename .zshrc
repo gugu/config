@@ -6,7 +6,7 @@ SAVEHIST=1000
 HISTCONTROL=replacedups
 export HISTCONTROL
 export HISTIGNORE="pwd:ls"
-export LC_ALL=ru_RU.UTF-8
+export LC_ALL=en_US.UTF-8
 export WORDCHARS="*?_-.[]~=&;!#$%^(){}<>"
 setopt beep notify append_history share_history autocd
 bindkey -e
@@ -44,12 +44,11 @@ preexec() {
     title "%m :$1"                                                                                                                                             
 }                                                                                                                                                              
                                                                                                                                                                
-precmd() {                                                                                                                                                     
-    title "%m"                                                                                                                                                 
-}                                                                                                                                                              
+precmd() {
+    title "%m"
+}
                                                                                                                                                                
-title() {                                                                                                                                                      
-                                                                                                                                                               
+title() {
 case $TERM in                                                                                                                                                  
     screen)                                                                                                                                                    
         print -Pn "\ek$1\e\\" # screen title (in ^A???)                                                                                                        
@@ -81,5 +80,7 @@ alias df="df -hT"
 alias em="emacs -nw"
 alias upconf="rsync -a rsync://dotsync.ru/gugu ~ && . ~/.zshrc"
 alias apt-get="sudo apt-get"     # remove annoyingness
+alias H="sudo shutdown -h now"
+alias ctags="ctags --python-kinds=-i -R"
 fortune
 . ~/.profile
