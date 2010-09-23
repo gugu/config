@@ -6,7 +6,7 @@ SAVEHIST=1000
 HISTCONTROL=replacedups
 export HISTCONTROL
 export HISTIGNORE="pwd:ls"
-export LC_ALL=ru_RU.UTF-8
+export LC_ALL=en_US.UTF-8
 export WORDCHARS="*?_-.[]~=&;!#$%^(){}<>"
 setopt beep notify append_history share_history autocd
 bindkey -e
