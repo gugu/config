@@ -32,7 +32,7 @@ alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
 alias -g ET='|& tail -n20'
-alias -g EL='|& less'
+alias -g EL='|& less -R'
 
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
@@ -44,12 +44,11 @@ preexec() {
     title "%m :$1"                                                                                                                                             
 }                                                                                                                                                              
                                                                                                                                                                
-precmd() {                                                                                                                                                     
-    title "%m"                                                                                                                                                 
-}                                                                                                                                                              
+precmd() {
+    title "%m"
+}
                                                                                                                                                                
-title() {                                                                                                                                                      
-                                                                                                                                                               
+title() {
 case $TERM in                                                                                                                                                  
     screen)                                                                                                                                                    
         print -Pn "\ek$1\e\\" # screen title (in ^A???)                                                                                                        
@@ -81,5 +80,10 @@ alias df="df -hT"
 alias em="emacs -nw"
 alias upconf="rsync -a rsync://dotsync.ru/gugu ~ && . ~/.zshrc"
 alias apt-get="sudo apt-get"     # remove annoyingness
-fortune
+alias H="sudo shutdown -h now"
+alias peoplenet="sudo pppd call peoplenet"
+which fortune >& /dev/null
+if [ $? = 0 ]; then fortune; fi
 . ~/.profile
+which htop >& /dev/null
+if [ $? = 0 ]; then alias top=htop; fi
