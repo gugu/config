@@ -176,3 +176,4 @@ def EvaluateCurrentRange():
 EOL
 map <C-h> :py EvaluateCurrentRange() 
 nnoremap <C-]> :execute 'tj' expand('<cword>')<CR>zv
+set keywordprg=pydoc

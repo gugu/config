@@ -32,7 +32,7 @@ alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
 alias -g ET='|& tail -n20'
-alias -g EL='|& less'
+alias -g EL='|& less -R'
 
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
@@ -81,6 +81,9 @@ alias em="emacs -nw"
 alias upconf="rsync -a rsync://dotsync.ru/gugu ~ && . ~/.zshrc"
 alias apt-get="sudo apt-get"     # remove annoyingness
 alias H="sudo shutdown -h now"
-alias ctags="ctags --python-kinds=-i -R"
-fortune
+alias peoplenet="sudo pppd call peoplenet"
+which fortune >& /dev/null
+if [ $? = 0 ]; then fortune; fi
 . ~/.profile
+which htop >& /dev/null
+if [ $? = 0 ]; then alias top=htop; fi
