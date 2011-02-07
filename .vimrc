@@ -168,12 +168,5 @@ let g:Perl_Email = "andrey@kostenko.name"
 set fileencodings=utf-8,cp1251
 set modeline
 autocmd BufRead *.py set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\" 
-autocmd BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m 
-python << EOL
-import vim
-def EvaluateCurrentRange():
-    eval(compile('\n'.join(vim.current.range),'','exec'),globals())
-EOL
-map <C-h> :py EvaluateCurrentRange() 
 nnoremap <C-]> :execute 'tj' expand('<cword>')<CR>zv
 set keywordprg=pydoc
