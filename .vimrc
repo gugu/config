@@ -16,7 +16,7 @@ set ch=1
 syntax enable
 hi comment ctermfg=cyan
 " Цветовая схема
-color evening
+color zellner
 set autoindent
 " Не создавать резервных копий файлов
 set nobackup

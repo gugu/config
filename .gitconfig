@@ -1,0 +1,5 @@
+[user]
+	name = Andrii Kostenko
+	email = andrey@kostenko.name
+[alias]
+    ci = commit
