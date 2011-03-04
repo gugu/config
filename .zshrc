@@ -83,7 +83,7 @@ alias apt-get="sudo apt-get"     # remove annoyingness
 alias H="sudo shutdown -h now"
 alias peoplenet="sudo pppd call peoplenet"
 which fortune >& /dev/null
-if [ $? = 0 ]; then fortune; fi
 . ~/.profile
+if [ $? = 0 ]; then fortune ~/.fortunes/zsh-fortune/zsh-fortunes; fi
 which htop >& /dev/null
 if [ $? = 0 ]; then alias top=htop; fi
