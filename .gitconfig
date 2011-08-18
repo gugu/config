@@ -3,3 +3,8 @@
 	email = andrey@kostenko.name
 [alias]
     ci = commit
+[color]
+    branch = auto
+    diff = auto
+    interactive = auto
+    status = auto
