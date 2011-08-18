@@ -1,6 +1,8 @@
 [user]
 	name = Andrii Kostenko
 	email = andrey@kostenko.name
+[core]
+    pager = less -R
 [alias]
     ci = commit
 [color]
@@ -8,3 +10,4 @@
     diff = auto
     interactive = auto
     status = auto
+    ui = auto
